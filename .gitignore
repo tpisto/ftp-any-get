@@ -1,3 +1,4 @@
 target
 node_modules
 .git
+/ftp-any-get.darwin-arm64.node

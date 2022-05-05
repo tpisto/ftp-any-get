@@ -4,6 +4,7 @@ use napi::bindgen_prelude::*;
 use napi::tokio::{self, fs};
 use napi_derive::napi;
 use url::{ParseError, Url};
+extern crate openssl_probe;
 
 mod ftp_ftps;
 mod sftp;
@@ -21,6 +22,7 @@ pub async fn get_any_ftp_file(path: &str) -> anyhow::Result<Vec<u8>> {
 
 #[napi]
 async fn get_file(url: String) -> Result<Buffer> {
+  openssl_probe::init_ssl_cert_env_vars();
   let file = get_any_ftp_file(url.as_str()).await;
 
   // Convert the result to a Buffer if result ok and return napi::Error if error

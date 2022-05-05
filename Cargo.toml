@@ -20,6 +20,7 @@ tokio = { version = "1.18.1", features = ["macros"]}
 anyhow = "1.0.57"
 url = "2.2.2"
 tokio-ssh2 = { git = "https://github.com/tyan-boot/tokio-ssh2" }
+openssl-probe = "0.1.5"
 
 # FTP providers (ftp, sftp)
 suppaftp = { version = "^4.2.0", features = ["async-secure"] }

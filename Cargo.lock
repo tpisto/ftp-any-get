@@ -316,6 +316,7 @@ dependencies = [
  "napi-build",
  "napi-derive",
  "openssl",
+ "openssl-probe",
  "suppaftp",
  "tokio",
  "tokio-ssh2",

@@ -35,7 +35,7 @@ jobs:
             architecture: x64
           - host: ubuntu-latest
             target: x86_64-unknown-linux-gnu
-            docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine-zig
+            docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian-zig
             build: |-
               set -e &&
               rustup target add x86_64-unknown-linux-gnu &&

@@ -1,0 +1,13 @@
+/Users/tommi/NodeProjects/ftp-any-get/target/debug/deps/quote-140812749e146b29.rmeta: /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/lib.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/ext.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/format.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/ident_fragment.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/to_tokens.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/runtime.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/spanned.rs
+
+/Users/tommi/NodeProjects/ftp-any-get/target/debug/deps/libquote-140812749e146b29.rlib: /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/lib.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/ext.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/format.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/ident_fragment.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/to_tokens.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/runtime.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/spanned.rs
+
+/Users/tommi/NodeProjects/ftp-any-get/target/debug/deps/quote-140812749e146b29.d: /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/lib.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/ext.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/format.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/ident_fragment.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/to_tokens.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/runtime.rs /Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/spanned.rs
+
+/Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/lib.rs:
+/Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/ext.rs:
+/Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/format.rs:
+/Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/ident_fragment.rs:
+/Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/to_tokens.rs:
+/Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/runtime.rs:
+/Users/tommi/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.18/src/spanned.rs:

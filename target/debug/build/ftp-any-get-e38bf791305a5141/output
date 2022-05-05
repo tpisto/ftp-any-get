@@ -1,0 +1,4 @@
+cargo:rerun-if-env-changed=DEBUG_GENERATED_CODE
+cargo:rustc-cdylib-link-arg=-Wl
+cargo:rustc-cdylib-link-arg=-undefined
+cargo:rustc-cdylib-link-arg=dynamic_lookup

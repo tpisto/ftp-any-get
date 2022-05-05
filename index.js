@@ -30,7 +30,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./ftp-any-get.android-arm64.node')
           } else {
-            nativeBinding = require('ftp-any-get-android-arm64')
+            nativeBinding = require('@tpisto/ftp-any-get-android-arm64')
           }
         } catch (e) {
           loadError = e
@@ -42,7 +42,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./ftp-any-get.android-arm-eabi.node')
           } else {
-            nativeBinding = require('ftp-any-get-android-arm-eabi')
+            nativeBinding = require('@tpisto/ftp-any-get-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -62,7 +62,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./ftp-any-get.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('ftp-any-get-win32-x64-msvc')
+            nativeBinding = require('@tpisto/ftp-any-get-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -76,7 +76,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./ftp-any-get.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('ftp-any-get-win32-ia32-msvc')
+            nativeBinding = require('@tpisto/ftp-any-get-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
@@ -90,7 +90,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./ftp-any-get.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('ftp-any-get-win32-arm64-msvc')
+            nativeBinding = require('@tpisto/ftp-any-get-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -108,7 +108,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./ftp-any-get.darwin-x64.node')
           } else {
-            nativeBinding = require('ftp-any-get-darwin-x64')
+            nativeBinding = require('@tpisto/ftp-any-get-darwin-x64')
           }
         } catch (e) {
           loadError = e
@@ -122,7 +122,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./ftp-any-get.darwin-arm64.node')
           } else {
-            nativeBinding = require('ftp-any-get-darwin-arm64')
+            nativeBinding = require('@tpisto/ftp-any-get-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -141,7 +141,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./ftp-any-get.freebsd-x64.node')
       } else {
-        nativeBinding = require('ftp-any-get-freebsd-x64')
+        nativeBinding = require('@tpisto/ftp-any-get-freebsd-x64')
       }
     } catch (e) {
       loadError = e
@@ -158,7 +158,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./ftp-any-get.linux-x64-musl.node')
             } else {
-              nativeBinding = require('ftp-any-get-linux-x64-musl')
+              nativeBinding = require('@tpisto/ftp-any-get-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
@@ -171,7 +171,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./ftp-any-get.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('ftp-any-get-linux-x64-gnu')
+              nativeBinding = require('@tpisto/ftp-any-get-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -187,7 +187,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./ftp-any-get.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('ftp-any-get-linux-arm64-musl')
+              nativeBinding = require('@tpisto/ftp-any-get-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
@@ -200,7 +200,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./ftp-any-get.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('ftp-any-get-linux-arm64-gnu')
+              nativeBinding = require('@tpisto/ftp-any-get-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -215,7 +215,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./ftp-any-get.linux-arm-gnueabihf.node')
           } else {
-            nativeBinding = require('ftp-any-get-linux-arm-gnueabihf')
+            nativeBinding = require('@tpisto/ftp-any-get-linux-arm-gnueabihf')
           }
         } catch (e) {
           loadError = e
@@ -236,6 +236,6 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { sum } = nativeBinding
+const { readFileAsync } = nativeBinding
 
-module.exports.sum = sum
+module.exports.readFileAsync = readFileAsync

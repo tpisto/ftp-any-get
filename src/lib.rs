@@ -1,9 +1,62 @@
-#![deny(clippy::all)]
+use anyhow;
+use futures::prelude::*;
+use napi::bindgen_prelude::*;
+use napi::tokio::{self, fs};
+use napi_derive::napi;
+use url::{ParseError, Url};
 
-#[macro_use]
-extern crate napi_derive;
+mod ftp_ftps;
+mod sftp;
+
+pub async fn get_any_ftp_file(path: &str) -> anyhow::Result<Vec<u8>> {
+  let ftp_url = Url::parse(path)?;
+
+  match ftp_url.scheme() {
+    "ftp" => ftp_ftps::get_ftp_file(ftp_url).await,
+    "ftps" => ftp_ftps::get_ftp_file(ftp_url).await,
+    "sftp" => sftp::get_sftp_file(ftp_url).await,
+    _ => return Err(anyhow::anyhow!("Unsupported scheme")),
+  }
+}
 
 #[napi]
-fn sum(a: i32, b: i32) -> i32 {
-  a + b
+async fn read_file_async(path: String) -> Result<Buffer> {
+  fs::read(path)
+    .map(|r| match r {
+      Ok(content) => Ok(content.into()),
+      Err(e) => Err(Error::new(
+        Status::GenericFailure,
+        format!("failed to read file, {}", e),
+      )),
+    })
+    .await
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+
+  #[tokio::test]
+  async fn get_ftp_file() {
+    let ftp_file = get_any_ftp_file("ftp://demo:password@test.rebex.net/readme.txt")
+      .await
+      .unwrap();
+    assert_eq!(405, ftp_file.len());
+    // Print ftp file as String
+    println!("{}", String::from_utf8(ftp_file).unwrap());
+  }
+
+  #[tokio::test]
+  async fn get_ftps_file() {
+    let ftps_file = get_any_ftp_file("ftps://demo:password@test.rebex.net/readme.txt").await;
+    assert_eq!(405, ftps_file.unwrap().len());
+  }
+
+  #[tokio::test]
+  async fn get_sftp_file() {
+    // let sftp_file = get_any_ftp_file("sftp://demo:password@test.rebex.net/readme.txt").await;
+    let sftp_file = get_any_ftp_file("sftp://demo:password@test.rebex.net/readme.txt").await;
+
+    assert_eq!(405, sftp_file.unwrap().len());
+  }
 }

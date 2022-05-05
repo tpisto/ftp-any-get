@@ -1,3 +1,3 @@
-import { sum } from "./index.js";
+import { readFileAsync } from "./index.js";
 
-console.log("From native", sum(40, 2));
+console.log("From native", (await readFileAsync("./index.js")).toString());

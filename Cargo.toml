@@ -1,15 +1,28 @@
 [package]
 edition = "2021"
-name = "ftp-any-get"
-version = "0.0.0"
+name = "ftp_any_get"
+version = "0.0.1"
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
+futures = "0.3"
 # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
-napi = { version = "2.3.3", default-features = false, features = ["napi4"] }
+napi = { version = "2.3.3", default-features = false, features = [
+  "tokio_fs",
+  "napi4",
+  "tokio_rt",
+  "async",
+] }
 napi-derive = "2.3.2"
+tokio = { version = "1.18.1", features = ["macros"]}
+anyhow = "1.0.57"
+url = "2.2.2"
+tokio-ssh2 = { git = "https://github.com/tyan-boot/tokio-ssh2" }
+
+# FTP providers (ftp, sftp)
+suppaftp = { version = "^4.2.0", features = ["async-secure"] }
 
 [build-dependencies]
 napi-build = "1.2.1"

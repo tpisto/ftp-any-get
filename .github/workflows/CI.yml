@@ -35,9 +35,10 @@ jobs:
             architecture: x64
           - host: ubuntu-latest
             target: x86_64-unknown-linux-gnu
-            docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian-zig
+            docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine-zig
             build: |-
               set -e &&
+              apk add openssl-dev pkgconfig &&                
               rustup target add x86_64-unknown-linux-gnu &&
               yarn build --target x86_64-unknown-linux-gnu --zig --zig-abi-suffix 2.12 &&
               llvm-strip -x *.node

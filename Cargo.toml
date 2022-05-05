@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
-name = "ftp_any_get"
-version = "0.0.1"
+name = "ftp-any-get"
+version = "0.0.4"
 
 [lib]
 crate-type = ["cdylib"]
@@ -23,6 +23,7 @@ tokio-ssh2 = { git = "https://github.com/tyan-boot/tokio-ssh2" }
 
 # FTP providers (ftp, sftp)
 suppaftp = { version = "^4.2.0", features = ["async-secure"] }
+openssl = { version = "0.10.40", features = ["vendored"] }
 
 [build-dependencies]
 napi-build = "1.2.1"

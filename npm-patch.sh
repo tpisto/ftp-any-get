@@ -1,3 +1,3 @@
 #!/bin/sh
 npm version patch
-git push --follow-tags
+git push origin HEAD --follow-tags

@@ -34,7 +34,7 @@ jobs:
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine-zig
             build: |-
               set -e &&
-              apk add openssl-dev pkgconfig &&
+              apk add --no-cache curl perl openssl-dev ca-certificates linux-headers build-base zsh &&
               rustup target add x86_64-unknown-linux-gnu &&
               yarn build --target x86_64-unknown-linux-gnu --zig --zig-abi-suffix 2.12 &&
               llvm-strip -x *.node
@@ -53,7 +53,7 @@ jobs:
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine-zig
             build: |-
               set -e &&
-              apk add openssl-dev pkgconfig &&
+              apk add --no-cache curl perl openssl-dev ca-certificates linux-headers build-base zsh &&
               rustup target add aarch64-unknown-linux-gnu &&
               yarn build --target aarch64-unknown-linux-gnu --zig --zig-abi-suffix 2.17 &&
               llvm-strip -x *.node

@@ -1,15 +1,15 @@
 {
-  "name": "@tpisto/ftp-any-get-linux-x64-gnu",
+  "name": "@tpisto/ftp-any-get-linux-arm64-gnu",
   "version": "0.0.0",
   "os": [
     "linux"
   ],
   "cpu": [
-    "x64"
+    "arm64"
   ],
-  "main": "ftp-any-get.linux-x64-gnu.node",
+  "main": "ftp-any-get.linux-arm64-gnu.node",
   "files": [
-    "ftp-any-get.linux-x64-gnu.node"
+    "ftp-any-get.linux-arm64-gnu.node"
   ],
   "license": "MIT",
   "engines": {

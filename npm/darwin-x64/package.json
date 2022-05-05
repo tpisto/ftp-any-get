@@ -1,5 +1,5 @@
 {
-  "name": "ftp-any-get-darwin-x64",
+  "name": "@tpisto/ftp-any-get-darwin-x64",
   "version": "0.0.1",
   "os": [
     "darwin"

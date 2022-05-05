@@ -1,3 +1,3 @@
-# `ftp-any-get-win32-x64-msvc`
+# `@tpisto/ftp-any-get-win32-x64-msvc`
 
-This is the **x86_64-pc-windows-msvc** binary for `ftp-any-get`
+This is the **x86_64-pc-windows-msvc** binary for `@tpisto/ftp-any-get`

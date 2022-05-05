@@ -1,3 +1,3 @@
-# `ftp-any-get-linux-x64-gnu`
+# `@tpisto/ftp-any-get-linux-x64-gnu`
 
-This is the **x86_64-unknown-linux-gnu** binary for `ftp-any-get`
+This is the **x86_64-unknown-linux-gnu** binary for `@tpisto/ftp-any-get`

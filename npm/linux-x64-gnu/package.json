@@ -1,5 +1,5 @@
 {
-  "name": "ftp-any-get-linux-x64-gnu",
+  "name": "@tpisto/ftp-any-get-linux-x64-gnu",
   "version": "0.0.1",
   "os": [
     "linux"

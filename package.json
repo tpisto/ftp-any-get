@@ -1,13 +1,17 @@
 {
   "name": "@tpisto/ftp-any-get",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
     "name": "ftp-any-get",
     "triples": {
+      "defaults": false,
       "additional": [
-        "aarch64-apple-darwin"
+        "aarch64-apple-darwin",
+        "aarch64-unknown-linux-gnu",
+        "x86_64-apple-darwin",
+        "x86_64-unknown-linux-gnu"
       ]
     }
   },
@@ -26,11 +30,5 @@
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "version": "napi version"
-  },
-  "optionalDependencies": {
-    "@tpisto/ftp-any-get-win32-x64-msvc": "0.0.4",
-    "@tpisto/ftp-any-get-darwin-x64": "0.0.4",
-    "@tpisto/ftp-any-get-linux-x64-gnu": "0.0.4",
-    "@tpisto/ftp-any-get-darwin-arm64": "0.0.4"
   }
 }

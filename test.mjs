@@ -1,3 +1,3 @@
-import { readFileAsync } from "./index.js";
+import { getFile } from "./index.js";
 
-console.log("From native", (await readFileAsync("./index.js")).toString());
+console.log("From native", (await getFile("sftp://demo:password@test.rebex.net/readme.txt")).toString());

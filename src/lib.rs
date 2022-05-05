@@ -20,16 +20,14 @@ pub async fn get_any_ftp_file(path: &str) -> anyhow::Result<Vec<u8>> {
 }
 
 #[napi]
-async fn read_file_async(path: String) -> Result<Buffer> {
-  fs::read(path)
-    .map(|r| match r {
-      Ok(content) => Ok(content.into()),
-      Err(e) => Err(Error::new(
-        Status::GenericFailure,
-        format!("failed to read file, {}", e),
-      )),
-    })
-    .await
+async fn get_file(url: String) -> Result<Buffer> {
+  let file = get_any_ftp_file(url.as_str()).await;
+
+  // Convert the result to a Buffer if result ok and return napi::Error if error
+  match file {
+    Ok(content) => Ok(content.into()),
+    Err(e) => Err(Error::from_reason(e.to_string())),
+  }
 }
 
 #[cfg(test)]

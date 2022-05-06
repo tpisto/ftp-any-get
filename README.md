@@ -3,10 +3,10 @@
 # ftp-any-get
 Node.js native module to get file from FTP, FTPS and SFTP sources.
 
-# Motivation
+## Motivation
 Easy to install. Easy to use. Just single asynchronous function: "getFile".
 
-# Install
+## Install
 ```
 npm install @tpisto/ftp-any-get
 ```
@@ -15,7 +15,7 @@ or
 npm add @tpisto/ftp-any-get
 ```
 
-# How to use
+## How to use
 
 Get file from the ftp server
 ```javascript

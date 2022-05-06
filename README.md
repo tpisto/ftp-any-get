@@ -35,6 +35,17 @@ async function main() {
 main();
 ```
 
+Because we are trying simply to fetch file from some FTPS server, the certificate check is disabled by default 😮. You can enable cert checks by adding "is_strict" parameter to function.
+```javascript
+import { getFile } from "@tpisto/ftp-any-get"
+
+async function main() {
+  // Fetch from FTP server using TLS AND disable "danger_accept_invalid_certs"
+  let ftpsFile = await getFile("ftps://demo:password@my-ftp-server.net/my-file.txt", true);
+}
+main();
+```
+
 ## Install ☁
 ```
 npm install @tpisto/ftp-any-get

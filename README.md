@@ -18,18 +18,21 @@ Node.js native module to get file from FTP, FTPS and SFTP sources.
 
 ## How to use 📚
 
-Get file from the ftp server
+Get file from the ftp server (index.mjs)
 ```javascript
 import { getFile } from "@tpisto/ftp-any-get"
 
-// Fetch from FTP server
-let ftpFile = await getFile("ftp://demo:password@my-ftp-server.net/my-file.txt");
+async function main() {
+  // Fetch from FTP server
+  let ftpFile = await getFile("ftp://demo:password@my-ftp-server.net/my-file.txt");
 
-// Fetch from FTP server using TLS
-let ftpsFile = await getFile("ftps://demo:password@my-ftp-server.net/my-file.txt");
+  // Fetch from FTP server using TLS
+  let ftpsFile = await getFile("ftps://demo:password@my-ftp-server.net/my-file.txt");
 
-// Fetch file using SFTP. SFTP runs over the SSH protocol.
-let sftpFile = await getFile("sftp://demo:password@my-ftp-server.net/my-file.txt");
+  // Fetch file using SFTP. SFTP runs over the SSH protocol.
+  let sftpFile = await getFile("sftp://demo:password@my-ftp-server.net/my-file.txt");
+}
+main();
 ```
 
 ## Install ☁

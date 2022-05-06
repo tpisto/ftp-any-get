@@ -35,7 +35,7 @@ async function main() {
 main();
 ```
 
-If you want to accept accept_invalid_certs 😮, you can disable cert checks by adding "accept_invalid_certs" parameter to function.
+If you want to accept_invalid_certs 😮, you can disable cert checks by adding "accept_invalid_certs" parameter to function.
 ```javascript
 import { getFile } from "@tpisto/ftp-any-get"
 

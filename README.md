@@ -5,6 +5,7 @@
 # ftp-any-get
 
 [![CI](https://github.com/tpisto/ftp-any-get/actions/workflows/CI.yml/badge.svg)](https://github.com/tpisto/ftp-any-get/actions/workflows/CI.yml)
+<img src="https://img.shields.io/badge/license-MIT%2FApache--2.0-blue" />
 <img src="https://img.shields.io/node/v/@tpisto/ftp-any-get" />
 <img src="https://img.shields.io/github/languages/count/tpisto/ftp-any-get" />
 <a href="https://discord.gg/aMeUQHuEZy"><img src="https://img.shields.io/discord/971910223029755954" /></a>

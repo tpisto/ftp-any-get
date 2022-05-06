@@ -9,21 +9,21 @@ extern crate openssl_probe;
 mod ftp_ftps;
 mod sftp;
 
-pub async fn get_any_ftp_file(path: &str) -> anyhow::Result<Vec<u8>> {
+pub async fn get_any_ftp_file(path: &str, is_strict: Option<bool>) -> anyhow::Result<Vec<u8>> {
   let ftp_url = Url::parse(path)?;
 
   match ftp_url.scheme() {
-    "ftp" => ftp_ftps::get_ftp_file(ftp_url).await,
-    "ftps" => ftp_ftps::get_ftp_file(ftp_url).await,
+    "ftp" => ftp_ftps::get_ftp_file(ftp_url, is_strict).await,
+    "ftps" => ftp_ftps::get_ftp_file(ftp_url, is_strict).await,
     "sftp" => sftp::get_sftp_file(ftp_url).await,
     _ => return Err(anyhow::anyhow!("Unsupported scheme")),
   }
 }
 
 #[napi]
-async fn get_file(url: String) -> Result<Buffer> {
+async fn get_file(url: String, is_strict: Option<bool>) -> Result<Buffer> {
   openssl_probe::init_ssl_cert_env_vars();
-  let file = get_any_ftp_file(url.as_str()).await;
+  let file = get_any_ftp_file(url.as_str(), is_strict).await;
 
   // Convert the result to a Buffer if result ok and return napi::Error if error
   match file {

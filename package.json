@@ -15,7 +15,16 @@
       ]
     }
   },
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://www.opensource.org/licenses/mit-license.php"
+    },
+    {
+      "type": "Apache-2.0",
+      "url": "https://opensource.org/licenses/apache2.0.php"
+    }
+  ],
   "devDependencies": {
     "@napi-rs/cli": "^2.7.0",
     "ava": "^4.0.1"
@@ -30,5 +39,10 @@
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "version": "napi version"
-  }
+  },
+  "keywords": [
+    "ftp",
+    "sftp",
+    "ftps"
+  ]
 }

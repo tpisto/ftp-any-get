@@ -31,7 +31,7 @@ or
 npm add @tpisto/ftp-any-get
 ```
 
-## Supported platforms (macOS M1 and x86, Linux ARM and x86)
+## Supported platforms (macOS M1 and x86_64, Linux ARM and x86_64)
 
 - x86_64-apple-darwin
 - aarch64-apple-darwin

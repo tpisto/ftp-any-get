@@ -7,7 +7,7 @@ use suppaftp::async_native_tls::TlsConnector;
 use suppaftp::FtpStream;
 use url::Url;
 
-pub async fn get_ftp_file(url: Url, is_strict: Option<bool>) -> Result<Vec<u8>> {
+pub async fn get_ftp_file(url: Url, accept_invalid_certs: Option<bool>) -> Result<Vec<u8>> {
   let address = if url.port().is_some() {
     format!("{}:{}", url.host_str().unwrap(), url.port().unwrap())
   } else {
@@ -20,7 +20,7 @@ pub async fn get_ftp_file(url: Url, is_strict: Option<bool>) -> Result<Vec<u8>> 
   let mut ftp_stream = if url.scheme() == "ftps" {
     ftp_stream
       .into_secure(
-        TlsConnector::new().danger_accept_invalid_certs(!is_strict.unwrap_or(false)),
+        TlsConnector::new().danger_accept_invalid_certs(accept_invalid_certs.unwrap_or(false)),
         url.host_str().unwrap(),
       )
       .await

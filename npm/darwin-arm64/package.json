@@ -1,6 +1,6 @@
 {
   "name": "@tpisto/ftp-any-get-darwin-arm64",
-  "version": "0.0.7",
+  "version": "0.1.1",
   "os": [
     "darwin"
   ],

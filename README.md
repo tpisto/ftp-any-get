@@ -6,7 +6,7 @@ Node.js native module to get file from FTP, FTPS and SFTP sources.
 ## Motivation 🧐
 Easy to install. Easy to use. Just single asynchronous function: "getFile".
 
-## How to use 👋
+## How to use 📚
 
 Get file from the ftp server
 ```javascript
@@ -36,8 +36,8 @@ npm add @tpisto/ftp-any-get
 
 ## This Node.js native module is written in Rust. Powered by:
 
-[![napi.rs](https://napi.rs/img/favicon.png)
 
-- [napi.rs](https://napi.rs/)
+
+- ![napi.rs](https://napi.rs/img/favicon.png | width=20)[napi.rs](https://napi.rs/)
 - [suppaftp](https://github.com/veeso/suppaftp)
 - [tokio-ssh2](https://github.com/tyan-boot/tokio-ssh2)

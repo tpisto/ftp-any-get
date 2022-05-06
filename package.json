@@ -42,7 +42,7 @@
   },
   "keywords": [
     "ftp",
-    "sftp",
-    "ftps"
+    "ftps",
+    "sftp"
   ]
 }

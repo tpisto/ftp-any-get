@@ -1,8 +1,6 @@
 Node.js native module to get file from FTP, FTPS and SFTP sources.
 
-<p></p>
-<img src="https://user-images.githubusercontent.com/226244/167125036-c387a1df-c3d0-458e-845f-027f5ff069be.gif#gh-dark-mode-only" width=500 />
-<img src="https://user-images.githubusercontent.com/226244/167125048-7627796e-f902-4891-963e-2891bd3e75d7.gif#gh-light-mode-only" width=500 />
+<img src="https://user-images.githubusercontent.com/226244/167153822-eae25fb0-ff4e-4450-b436-ef9bd6ae9c16.png" width="500" />
 
 # ftp-any-get
 

@@ -38,6 +38,6 @@ npm add @tpisto/ftp-any-get
 
 
 
-- ![napi.rs](https://napi.rs/img/favicon.png | width=20)[napi.rs](https://napi.rs/)
+- ![napi.rs](https://napi.rs/img/favicon.png | width=20) [napi.rs](https://napi.rs/)
 - [suppaftp](https://github.com/veeso/suppaftp)
 - [tokio-ssh2](https://github.com/tyan-boot/tokio-ssh2)

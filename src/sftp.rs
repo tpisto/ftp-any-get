@@ -8,11 +8,7 @@ use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio_ssh2::AsyncSession;
 
 pub async fn get_sftp_file(url: Url) -> Result<Vec<u8>> {
-  let address = if url.port().is_some() {
-    format!("{}:{}", url.host_str().unwrap(), url.port().unwrap())
-  } else {
-    format!("{}:22", url.host_str().unwrap())
-  };
+  let address = format!("{}:{}", url.host_str().unwrap(), url.port().unwrap_or(22));
 
   let tcp = std::net::TcpStream::connect(address)?;
   let mut session = AsyncSession::new(tcp)?;

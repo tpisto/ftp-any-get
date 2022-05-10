@@ -8,12 +8,7 @@ use suppaftp::FtpStream;
 use url::Url;
 
 pub async fn get_ftp_file(url: Url, accept_invalid_certs: Option<bool>) -> Result<Vec<u8>> {
-  let address = if url.port().is_some() {
-    format!("{}:{}", url.host_str().unwrap(), url.port().unwrap())
-  } else {
-    format!("{}:21", url.host_str().unwrap())
-  };
-
+  let address = format!("{}:{}", url.host_str().unwrap(), url.port().unwrap_or(21));
   let ftp_stream = FtpStream::connect(address).await?;
 
   // Switch to secure mode if needed
@@ -30,13 +25,9 @@ pub async fn get_ftp_file(url: Url, accept_invalid_certs: Option<bool>) -> Resul
   };
 
   // Login
-  if url.password().is_some() {
-    ftp_stream
-      .login(url.username(), url.password().unwrap())
-      .await?;
-  } else {
-    ftp_stream.login(url.username(), "").await?;
-  }
+  ftp_stream
+    .login(url.username(), url.password().unwrap_or(""))
+    .await?;
 
   // We need to split the path and filename so that we can first change to the right directory using FTP commands
   let path_parts: Vec<&str> = url.path().split('/').collect();
